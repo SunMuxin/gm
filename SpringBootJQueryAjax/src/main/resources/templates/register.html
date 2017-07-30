@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="description" content="内容管理系统"/>
+    <meta name="author" content="蓝士钦"/>
+    <title>用户登录</title>
+
+    <!-- Bootstrap core CSS -->
+    <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet"/>
+
+    <!-- Custom styles for this template -->
+    <style>
+
+        body {
+            padding-top: 40px;
+            padding-bottom: 40px;
+            background-color: #eee;
+        }
+
+        .form-signin {
+            max-width: 330px;
+            padding: 15px;
+            margin: 0 auto;
+        }
+        .form-signin .form-signin-heading,
+        .form-signin .checkbox {
+            margin-bottom: 10px;
+        }
+        .form-signin .checkbox {
+            font-weight: normal;
+        }
+        .form-signin .form-control {
+            position: relative;
+            height: auto;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            padding: 10px;
+            font-size: 16px;
+        }
+        .form-signin .form-control:focus {
+            z-index: 2;
+        }
+        .form-signin input[name="userName"] {
+            margin-bottom: -1px;
+            border-bottom-right-radius: 0;
+            border-bottom-left-radius: 0;
+        }
+        .form-signin input[name="passWord"] {
+            margin-bottom: 10px;
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+
+
+<div class="container">
+
+    <form class="form-signin">
+        <h2 class="form-signin-heading">用户登录</h2>
+        <label for="inputUserName" class="sr-only">用户名</label>
+        <input name="userName" type="text" id="inputUserName" class="form-control" placeholder="请输入用户名" required="required" autofocus="autofocus"/>
+        <label for="inputPassword" class="sr-only">密码</label>
+        <input name="passWord" type="password" id="inputPassword" class="form-control" placeholder="密码" required="required"/>
+        <label for="inputDepartment" class="sr-only">部门</label>
+        <select name="type" class="form-control"> 
+		    <option value="0">基础软件</option> 
+		    <option value="1">东软遍在</option>
+		    <option value="2">东软熙康</option> 
+		    <option value="3">通企</option> 
+		    <option value="4">IT服务</option> 
+		    <option value="5">网络安全</option>
+		    <option value="6">汽车电子</option> 
+		    <option value="7">东软睿道</option> 
+		</select> 
+        <button class="btn btn-lg btn-primary btn-block" type="submit">登录</button>
+    </form>
+
+</div> <!-- /container -->
+
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script th:src="@{/js/jquery-3.2.1.min.js}" src="/"></script>
+<script th:src="@{/js/bootstrap.min.js}"></script>
+</body>
+</html>
